@@ -59,7 +59,7 @@ public class Game_Manager : Elven.Singleton<Game_Manager>
     private bool tutorialVisible;
     [SerializeField] private GameObject tutorialObj;
     [SerializeField] private GameSentence pointSentence;
-    [SerializeField] private TextMeshPro pointText;
+    [SerializeField] private TextMeshPro levelText;
 
     // ======================================================
 
@@ -105,7 +105,7 @@ public class Game_Manager : Elven.Singleton<Game_Manager>
             tutorialObj.SetActive(false);
         }
 
-        pointsText.text = string.Format(pointSentence.GetString(), level);
+        levelText.text = string.Format(pointSentence.GetString(), level);
     }
 
     void UpdateForbiddenMasks()
