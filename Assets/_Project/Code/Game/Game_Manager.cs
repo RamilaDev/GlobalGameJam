@@ -53,7 +53,7 @@ public class Game_Manager : Elven.Singleton<Game_Manager>
     [SerializeField] private GameObject forbiddenHimno;
 
     private int attendedClientInThisRound;
-    private int level;
+    private int level = 1;
 
 
     private bool tutorialVisible;
@@ -99,11 +99,7 @@ public class Game_Manager : Elven.Singleton<Game_Manager>
         if (clients.Count > 0)
             arrow_Ring.gameObject.SetActive(clients[0].End != 0);
 
-        if(level != 0 && !tutorialVisible)
-        {
-            tutorialVisible = true;
-            tutorialObj.SetActive(false);
-        }
+        
 
         levelText.text = string.Format(pointSentence.GetString(), level);
     }
@@ -133,6 +129,7 @@ public class Game_Manager : Elven.Singleton<Game_Manager>
         if (attendedClientInThisRound >= roundData.clientsToNextLevel)
         {
             roundData = new RoundData(level);
+            level++;
             attendedClientInThisRound = 0;
         }
     }
@@ -292,6 +289,12 @@ public class Game_Manager : Elven.Singleton<Game_Manager>
             cuoteSpeed = level;
             clientsToNextLevel = 3 * level;
             multiplyPoints = (int)(2 * (level + 1));
+
+            if (level != 1)
+            {
+                Game_Manager.Instance.tutorialVisible = true;
+                Game_Manager.Instance.tutorialObj.SetActive(false);
+            }
         }
     }
 

@@ -702,7 +702,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: 763dd80493e27624c945934a458525bc, type: 2}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
@@ -3380,6 +3380,143 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1313913970
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1313913974}
+  - component: {fileID: 1313913973}
+  - component: {fileID: 1313913972}
+  - component: {fileID: 1313913971}
+  m_Layer: 0
+  m_Name: Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1313913971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313913970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalCameraData
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
+  m_Version: 2
+--- !u!81 &1313913972
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313913970}
+  m_Enabled: 1
+--- !u!20 &1313913973
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313913970}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &1313913974
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313913970}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.1973308, y: -0.13737054, z: -0.028273672, w: -0.9702529}
+  m_LocalPosition: {x: 49.08958, y: 5.145439, z: -121.1728}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1321279171 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 812190107782874337, guid: cea4e2ffe3f77b851b42f1c60e02448e, type: 3}
@@ -4008,32 +4145,20 @@ MonoBehaviour:
   - {fileID: 1568016432510859342, guid: a4e91ae4ebb633202a96bfa97b25337b, type: 3}
   avariableGoldMasksMaterials: []
   goodSentenceHimno:
-  - es: "Que por tu admiraci\xF3n por la ciudad dorada, ya a los 6 a\xF1os vislumbrabas
-      tu imperio."
-    en: That because of your admiration for the golden city, at the age of 6 you
-      already envisioned your empire.
-  - es: "Que ya a tus 8 a\xF1os eras reconocido como un l\xEDder y un gu\xEDa para
-      muchos"
-    en: That at the age of 8 you were already recognized as a leader and guide for
-      many
-  - es: "Que fuiste traicionado por el primer falso mes\xEDas y condenado a una odisea
-      para transmitirnos tu ser"
-    en: That you were betrayed by the first false messiah and condemned to an odyssey
-      to convey your being to us
-  - es: "Que a tus 18 a\xF1os, por tu amor en la historia descubriste la mentira
-      cruel de los \xEDdolos dorados, creados para guiar a los borregos de nuestra
-      sociedad"
-    en: That at 18, through your love of history, you discovered the cruel lie of
-      golden idols, created to guide the sheep of our society.
-  - es: "Que viste por primera vez aquel cometa, que no era m\xE1s que un ap\xE9ndice,
-      una peque\xF1a parte de su verdadera voluntad"
-    en: That you saw that comet for the first time, which was nothing more than an
-      appendage, a small part of its true will.
+  - es: "Alabado t\xFA Ad\xE1m, por tu admiraci\xF3n por la ciudad dorada"
+    en: Praise be to you, Adam, for your admiration of the golden city.
+  - es: "Alabado t\xFA Ad\xE1m, ya a tus 8 a\xF1os eras reconocido como un l\xEDder"
+    en: Praise be to you, Adam. At the age of 8, you were already recognized as a
+      leader.
+  - es: "Alabado t\xFA Ad\xE1m, tu amor en la historia descubri\xF3 la mentira cruel"
+    en: Praise be to you, Adam, your love in history uncovered the cruel lie.
+  - es: "Alabado t\xFA Ad\xE1m, que subiste a lo alto del Monte Destino"
+    en: Praise be to you, Adam, who ascended to the top of Mount Destiny.
+  - es: "Alabado t\xFA Ad\xE1m, en tu honor se erigi\xF3 este templo"
+    en: Praise be to you, Adam, this temple was built in your honor.
   badSentenceHimno:
-  - es: "Que a tus 18 a\xF1os, por tu amor en el arte descubriste la mentira cruel
-      de los \xEDdolos dorados, creados para guiar a los borregos de nuestra sociedad"
-    en: That at 18, through your love of art, you discovered the cruel lie of golden
-      idols, created to guide the sheep of our society.
+  - es: "Alabado t\xFA Ad\xE1m, por tu admiraci\xF3n ehmm\u2026 yo..."
+    en: Praise be to you, Adam, for your admiration, um... I...
   - es: "Perdona\u2026 \xBFTengo que pagar por mi estancia en el hotel?"
     en: Excuse me... Do I have to pay for my stay at the hotel?
   - es: "\xBFHola, de que va la secta?"
@@ -4454,6 +4579,78 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 812190107782874337, guid: cea4e2ffe3f77b851b42f1c60e02448e, type: 3}
   m_PrefabInstance: {fileID: 2104490093}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1866612104
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1866612105}
+  - component: {fileID: 1866612107}
+  - component: {fileID: 1866612106}
+  m_Layer: 5
+  m_Name: RawImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1866612105
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866612104}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2079736599}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -0.000022888}
+  m_SizeDelta: {x: 800, y: 450.32}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1866612106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866612104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RawImage
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 8400000, guid: 763dd80493e27624c945934a458525bc, type: 2}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &1866612107
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866612104}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1890171062
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5219,6 +5416,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1866612105}
   - {fileID: 209117936}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5278,12 +5476,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Game_Text
   text:
-    es: Tutorial<br>  <- tu puntuacion, haz que no llegue a 0<br>  El nivel que te
-      encuentras, ira aumentando -><br>  decide bien a quien dejar pasar y a quien
-      no
-    en: Tutorial<br>  <- your score, don't let it reach 0<br>  The level you are
-      at will increase -><br>  decide carefully who to let pass and who not to let
-      pass
+    es: Tutorial, recuerda que leer es muy importante<br>  <- tu puntuacion, haz
+      que no llegue a 0<br>  El nivel que te encuentras, ira aumentando -><br>  decide
+      bien a quien dejar pasar y a quien no
+    en: Tutorial, remember read its very important<br>  <- your score, don't let
+      it reach 0<br>  The level you are at will increase -><br>  decide carefully
+      who to let pass and who not to let pass
 --- !u!114 &2086828089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5304,7 +5502,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Tutorial
+  m_text: 'Tutorial,
 
 
     <- tu puntuacion, haz que no llegue a 0
@@ -5547,3 +5745,4 @@ SceneRoots:
   - {fileID: 1159720635}
   - {fileID: 2104490093}
   - {fileID: 1107332234}
+  - {fileID: 1313913974}
