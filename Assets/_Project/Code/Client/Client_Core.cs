@@ -9,6 +9,7 @@ public class Client_Core : MonoBehaviour
 {
     private int idList => Game_Manager.Instance.Clients.FindIndex(x => x == this);
     public bool InExactlyPos => transform.position == nextPos;
+
     
     public int End;
 
@@ -24,6 +25,8 @@ public class Client_Core : MonoBehaviour
     public ClientData data;
 
     string sentence;
+
+    private bool hi;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -68,6 +71,12 @@ public class Client_Core : MonoBehaviour
         
         bool ready = idList == 0 && InExactlyPos;
         col.enabled = ready;
+
+        if(!hi)
+        {
+            hi = true;
+            GetComponent<Animator>().SetTrigger("hi");
+        }
     }
 
     public void Interact()
@@ -117,7 +126,15 @@ public class ClientData
 
     public ClientData()
     {
-        mask = (int)Random.Range(0, Game_Manager.Instance.avariableMasks.Length);
+        if(Random.Range(0, 3) != 0)
+        {
+            mask = Game_Manager.Instance.roundData.bannedMask[(int)Random.Range(0, Game_Manager.Instance.roundData.bannedMask.Length)];
+        }
+        else
+        {
+            mask = (int)Random.Range(0, Game_Manager.Instance.avariableMasks.Length);
+        }
+
         correctSentence = Random.Range(0, 2) == 0;
         colapse = Random.Range(0, Game_Manager.Instance.roundData.probabilityToMutateClient) == 0;
     

@@ -5,11 +5,12 @@ using TMPro;
 using System.Collections;
 using DigitalRuby.Tween;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class Game_Manager : Elven.Singleton<Game_Manager>
 {
     //
-    // Variables (NO TOCADAS)
+    // Variables
     //
 
     [SerializeField] private GameObject client_prefab;
@@ -49,9 +50,16 @@ public class Game_Manager : Elven.Singleton<Game_Manager>
     [SerializeField] private MeshFilter forbiddenMask_0;
     [SerializeField] private MeshFilter forbiddenMask_1;
     [SerializeField] private MeshFilter forbiddenMask_2;
+    [SerializeField] private GameObject forbiddenHimno;
 
     private int attendedClientInThisRound;
     private int level;
+
+
+    private bool tutorialVisible;
+    [SerializeField] private GameObject tutorialObj;
+    [SerializeField] private GameSentence pointSentence;
+    [SerializeField] private TextMeshPro pointText;
 
     // ======================================================
 
@@ -69,6 +77,11 @@ public class Game_Manager : Elven.Singleton<Game_Manager>
         UpdateUI();
         UpdateForbiddenMasks();
         CheckRoundProgress();
+
+        if(cuote < 0)
+        {
+            SceneManager.LoadScene("scene_GameOver");
+        }
     }
 
     // ===================== UPDATE PARTS =====================
@@ -85,6 +98,14 @@ public class Game_Manager : Elven.Singleton<Game_Manager>
 
         if (clients.Count > 0)
             arrow_Ring.gameObject.SetActive(clients[0].End != 0);
+
+        if(level != 0 && !tutorialVisible)
+        {
+            tutorialVisible = true;
+            tutorialObj.SetActive(false);
+        }
+
+        pointsText.text = string.Format(pointSentence.GetString(), level);
     }
 
     void UpdateForbiddenMasks()
@@ -103,6 +124,8 @@ public class Game_Manager : Elven.Singleton<Game_Manager>
             forbiddenMask_2.mesh = avariableMasks[roundData.bannedMask[2]];
         else
             forbiddenMask_2.mesh = null;
+
+        forbiddenHimno.SetActive(roundData.goodSentenceHimno);
     }
 
     void CheckRoundProgress()
@@ -217,9 +240,18 @@ public class Game_Manager : Elven.Singleton<Game_Manager>
 
     IEnumerator CuoteRutine()
     {
+        bool f = false;
         while (true)
         {
-            yield return new WaitForSeconds(roundData.cuoteSpeed);
+            if(!f) // La mayor cagada de la historia, a ver si asi no tarda en refrescar
+            {
+                yield return null;
+                f = true;
+            }
+            else
+            {
+                yield return new WaitForSeconds(roundData.cuoteSpeed); 
+            }
             cuote -= roundData.cuoteSpeed;
         }
     }
@@ -258,8 +290,8 @@ public class Game_Manager : Elven.Singleton<Game_Manager>
                 probabilityToMutateClient = 5;
 
             cuoteSpeed = level;
-            clientsToNextLevel = 8 * level;
-            multiplyPoints = (int)(1.5 * level);
+            clientsToNextLevel = 3 * level;
+            multiplyPoints = (int)(2 * (level + 1));
         }
     }
 

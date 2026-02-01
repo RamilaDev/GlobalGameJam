@@ -3,19 +3,19 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(Outline))]
+[RequireComponent(typeof(Game_Outline))]
 public class Interact_Trigger : MonoBehaviour
 {
     public UnityEvent onClick;
 
     public Renderer Mesh;
 
-    private Outline outline;
+    private Game_Outline outline;
     private Material[] originalMaterials;
 
     void Awake()
     {
-        outline = GetComponent<Outline>();
+        outline = GetComponent<Game_Outline>();
         outline.enabled = false;
         outline.OutlineWidth = 10;
 
